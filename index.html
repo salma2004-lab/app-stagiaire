@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion des Stagiaires</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Gestion des Stagiaires de l'ISTA</h1>
+        <nav>
+            <button id="btnAddStagiaire">Ajouter Stagiaire</button>
+            <button id="btnListStagiaires">Lister Stagiaires</button>
+        </nav>
+
+        <div id="formContainer" class="hidden">
+            <h2 id="formTitle">Ajouter un Stagiaire</h2>
+            <form id="stagiaireForm">
+                <input type="text" id="matStagiaire" placeholder="Matricule" required>
+                <input type="text" id="nomStagiaire" placeholder="Nom" required>
+                <input type="text" id="prenomStagiaire" placeholder="Prénom" required>
+                <input type="text" id="filiereStagiaire" placeholder="Filière" required>
+                <input type="number" id="anneeEtude" placeholder="Année d'étude" required>
+                <input type="text" id="typeBac" placeholder="Type de Bac" required>
+                <input type="number" id="anneeBac" placeholder="Année de Bac" required>
+                <button type="submit">Soumettre</button>
+            </form>
+        </div>
+
+        <div id="stagiairesList" class="hidden">
+            <h2>Liste des Stagiaires</h2>
+            <table id="stagiairesTable">
+                <thead>
+                    <tr>
+                        <th>Matricule</th>
+                        <th>Nom</th>
+                        <th>Prénom</th>
+                        <th>Filière</th>
+                        <th>Année d'étude</th>
+                        <th>Type de Bac</th>
+                        <th>Année de Bac</th>
+                    </tr>
+                </thead>
+                <tbody id="stagiairesBody"></tbody>
+            </table>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
